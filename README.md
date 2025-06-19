@@ -3,7 +3,19 @@
 # Necessary Installs
 - [Python 3.6+](https://www.python.org/downloads/)
 - [Jupyter Notebook Interface](https://docs.jupyter.org/en/stable/install/notebook-classic.html)
+- [MongoDB](https://www.mongodb.com/docs/manual/installation/)
 # Getting Started
+- Clone this repository and then import the data for MongoDB:
+	- This data comes from The Austin Animal Center located in Austin, Texas: [DOI](https://doi.org/10.26000/025.000001)
+```bash
+git clone https://github.com/nlwhite/CS340.git
+cd CS340
+mongoimport --username="${MONGO_USER}" --password="${MONGO_PASS}" \
+--port=${MONGO_PORT} --host=${MONGO_HOST} \
+--db=AAC  --collection=animals --authenticationDatabase=admin \
+--file=./aac_shelter_outcomes.csv --type=csv --headerline
+```
+	- Note that the environment variables: `MONGO_USER`, `MONGO_PASS`, `MONGO_PORT`, and `MONGO_HOST` must be set accordingly before running this command as-is.
 - To start the application, open the Jupyter Notebook and click 'Run'.
 - If the app started successfully, the exact http address is printed near the bottom.
 	- This url may be accessed by any computer logged into the same wifi as the computer that ran the application. Please ensure the wifi is secure and cannot be accessed by unknown users.
