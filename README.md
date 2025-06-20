@@ -1,17 +1,20 @@
 # Animal Shelter Database Dashboard
-- This project was created to simplify the task of finding rescue animals within a database. 
+- This project was created for finding rescue animals quickly and easily. Grazioso Salvare has determined that rescue dogs typically have selection criteria and this project will enable them to find dogs that match this criteria via a web browser. 
 # Necessary Installs
 - [Python 3.6+](https://www.python.org/downloads/)
 - [Jupyter Notebook Interface](https://docs.jupyter.org/en/stable/install/notebook-classic.html)
 - [MongoDB](https://www.mongodb.com/docs/manual/installation/)
 	- MongoDB provides the M within the MVC pattern. The `AnimalShelter.py` Python module accesses the database and performs CRUD operations in response to controllers. More on MVC down below.
+	- MongoDB interfaces particularly well with Python through the use of the PyMongo Python Module. Interfacing using PyMongo is strikingly similar to interfacing using Mongosh, the terminal program alternative. This consistency makes it incredibly simple to test queries before putting them in the application layer by using the terminal to test them instead, bypassing the browser and annoying load times.
+- PyMongo
+	- `pip install pymongo`
 - Dash
 	- `pip install dash`
-	- Dash provides a framework that enables developers to provide the VC within the MVC pattern. Put simply, views are implemented through Dash components and controllers are implemented through callback functions that respond to changes within the View asynchronously. More on MVC down below.
+	- Dash provides a framework that enables developers to provide the VC within the MVC pattern. Put simply, views are implemented through Dash components and controllers are implemented through callback functions that respond to changes within the view asynchronously. More on MVC down below.
 - Pandas
 	- `pip install pandas`
 		- Pandas is used for creating a `DataFrame` from the data retrieved from the 'AnimalShelter.py' Python module.
-## MVC
+### MVC
 - This pattern works well with RESTful APIs which is applied within the `AnimalShelter.py` Python module.
 - A short description of MVC is as follows:
 	- Model: defines the data & updates the view.
@@ -52,3 +55,12 @@ mongoimport --username="${MONGO_USER}" --password="${MONGO_PASS}" \
 		- Sex: Intact Male
 		- Age: 20-300 weeks
 - Lastly, there is one last button for removing the filters named, 'Reset'
+### Screenshots
+- Application starting state:
+/assets/starting_state.png
+- After clicking the 'Water' radio button:
+/assets/water_rescue.png
+- After clicking the 'Mountain/Wilderness' radio button:
+/assets/mountain_wilderness_rescue.png
+- After clicking the 'Reset' radio button:
+/assets/reset.png
