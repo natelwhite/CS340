@@ -2,7 +2,9 @@
 - This project was created for finding rescue animals quickly and easily. Grazioso Salvare has determined that rescue dogs typically have selection criteria and this project will enable them to find dogs that match this criteria via a web browser. 
 # Necessary Installs
 - [Python 3.6+](https://www.python.org/downloads/)
+	- Core language being used in the project.
 - [Jupyter Notebook Interface](https://docs.jupyter.org/en/stable/install/notebook-classic.html)
+	- Used for running Python code reliably.
 - [MongoDB](https://www.mongodb.com/docs/manual/installation/)
 	- MongoDB provides the M within the MVC pattern. The `AnimalShelter.py` Python module accesses the database and performs CRUD operations in response to controllers. More on MVC down below.
 	- MongoDB interfaces particularly well with Python through the use of the PyMongo Python Module. Interfacing using PyMongo is strikingly similar to interfacing using Mongosh, the terminal program alternative. This consistency makes it incredibly simple to test queries before putting them in the application layer by using the terminal to test them instead, bypassing the browser and annoying load times.
@@ -64,3 +66,10 @@ mongoimport --username="${MONGO_USER}" --password="${MONGO_PASS}" \
 ![Application mountain/wilderness rescue](/assets/mountain_wilderness_rescue.png)
 - After clicking the 'Reset' radio button:
 ![Application reset](/assets/reset.png)
+# Steps Taken
+1. Imported the data from the `aac_shelter_outcomes.csv` file into MongoDB.
+2. Created a user that can authenticate with the database.
+3. Created a CRUD Python module that accesses the database as this user.
+4. Created a dashboard that visualizes the data and provides filter functionality for the user.
+# Challenges
+- For the radio buttons, it was unclear which path was best for filtering the data. I had to decide between querying the database using the CRUD Python module I wrote, or filtering the Pandas dataframe. The latter option would be filtering 'old' data while the former would fetch the data again. I decided to go with the former since it wouldn't be ideal to reboot the entire application when looking for a new entry in the database. Although, since the data is stored in a local CSV file rather than an external server, it's unlikely that the data will have changed without the application administrator's knowledge.
