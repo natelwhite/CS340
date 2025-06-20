@@ -4,6 +4,19 @@
 - [Python 3.6+](https://www.python.org/downloads/)
 - [Jupyter Notebook Interface](https://docs.jupyter.org/en/stable/install/notebook-classic.html)
 - [MongoDB](https://www.mongodb.com/docs/manual/installation/)
+	- MongoDB provides the M within the MVC pattern. The `AnimalShelter.py` Python module accesses the database and performs CRUD operations in response to controllers. More on MVC down below.
+- Dash
+	- `pip install dash`
+	- Dash provides a framework that enables developers to provide the VC within the MVC pattern. Put simply, views are implemented through Dash components and controllers are implemented through callback functions that respond to changes within the View asynchronously. More on MVC down below.
+- Pandas
+	- `pip install pandas`
+		- Pandas is used for creating a `DataFrame` from the data retrieved from the 'AnimalShelter.py' Python module.
+## MVC
+- This pattern works well with RESTful APIs which is applied within the `AnimalShelter.py` Python module.
+- A short description of MVC is as follows:
+	- Model: defines the data & updates the view.
+	- View: defines the user interface & sends user input to the controller.
+	- Controller: defines control logic & manipulates the model according to the user input recieved from 'View'.
 # Getting Started
 - Clone this repository and then import the data for MongoDB:
 	- This data comes from The Austin Animal Center located in Austin, Texas: [DOI](https://doi.org/10.26000/025.000001)
