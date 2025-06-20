@@ -57,10 +57,10 @@ mongoimport --username="${MONGO_USER}" --password="${MONGO_PASS}" \
 - Lastly, there is one last button for removing the filters named, 'Reset'
 ### Screenshots
 - Application starting state:
-/assets/starting_state.png
+![Application starting state](/assets/starting_state.png)
 - After clicking the 'Water' radio button:
-/assets/water_rescue.png
+![Application water rescue](/assets/water_rescue.png)
 - After clicking the 'Mountain/Wilderness' radio button:
-/assets/mountain_wilderness_rescue.png
+![Application mountain/wilderness rescue](/assets/mountain_wilderness_rescue.png)
 - After clicking the 'Reset' radio button:
-/assets/reset.png
+![Application reset](/assets/reset.png)
