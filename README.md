@@ -70,6 +70,6 @@ mongoimport --username="${MONGO_USER}" --password="${MONGO_PASS}" \
 1. Imported the data from the `aac_shelter_outcomes.csv` file into MongoDB.
 2. Created a user that can authenticate with the database.
 3. Created a CRUD Python module that accesses the database as this user.
-4. Created a dashboard that visualizes the data and provides filter functionality for the user.
+4. Created a dashboard that visualizes the data and provides filter functionality for the user by calling methods from the previously mentioned CRUD Python module.
 # Challenges
 - For the radio buttons, it was unclear which path was best for filtering the data. I had to decide between querying the database using the CRUD Python module I wrote, or filtering the Pandas dataframe. The latter option would be filtering 'old' data while the former would fetch the data again. I decided to go with the former since it wouldn't be ideal to reboot the entire application when looking for a new entry in the database. Although, since the data is stored in a local CSV file rather than an external server, it's unlikely that the data will have changed without the application administrator's knowledge.
