@@ -64,6 +64,8 @@ mongoimport --username="${MONGO_USER}" --password="${MONGO_PASS}" \
 ![Application water rescue](/assets/water_rescue.png)
 - After clicking the 'Mountain/Wilderness' radio button:
 ![Application mountain/wilderness rescue](/assets/mountain_wilderness_rescue.png)
+- After clicking the 'Disaster/Individual Tracking' radio button:
+![Application disaster/individual tracking](/assets/disaster_tracking.png)
 - After clicking the 'Reset' radio button:
 ![Application reset](/assets/reset.png)
 # Steps Taken
